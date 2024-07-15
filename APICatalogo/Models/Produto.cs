@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace APICatalogo.Models;
 
@@ -30,5 +31,6 @@ public class Produto
 
 	
 	[ForeignKey("CategoriaId")]
+	[JsonIgnore]
 	public virtual Categoria? Categoria { get; set; }
 }
