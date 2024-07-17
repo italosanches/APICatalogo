@@ -61,7 +61,7 @@ namespace APICatalogo.Controllers
 			}
 			catch (Exception)
 			{
-				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atenter a solicitação.");
+				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atender a solicitação.");
 			}
 		}
 
