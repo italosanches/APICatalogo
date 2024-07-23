@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /APICatalogo/appsettings.json
 /APICatalogo/appsettings.json
+/APICatalogo/appsettings.Development.json
