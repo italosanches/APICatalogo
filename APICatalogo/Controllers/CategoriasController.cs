@@ -26,7 +26,7 @@ namespace APICatalogo.Controllers
 			}
 			catch (Exception)
 			{
-				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atenter a solicitação");
+				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atender a solicitação");
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace APICatalogo.Controllers
 			}
 			catch (Exception)
 			{
-				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atenter a solicitação.");
+				return StatusCode(StatusCodes.Status500InternalServerError, "erro ao atender a solicitação.");
 			}
 		}
 
@@ -68,7 +68,7 @@ namespace APICatalogo.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult<Categoria> Post([FromBody] Categoria categoria)
+		public ActionResult<Categoria> Post(Categoria categoria)
 		{
 			try
 			{
@@ -78,7 +78,7 @@ namespace APICatalogo.Controllers
 				}
 				_context.Categorias.Add(categoria);
 				_context.SaveChanges();
-				return new CreatedAtRouteResult("GetCategoriaById", new { id = categoria.CategoraId }, categoria);
+				return new CreatedAtRouteResult("GetCategoriaById", new { id = categoria.CategoraId }, categoria); //retorna 201 quando um recurso e criado
 			}
 			catch (Exception)
 			{

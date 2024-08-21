@@ -15,7 +15,7 @@ namespace APICatalogo.Filters
         {
             // executa antes da Action
             _logger.LogInformation("Executando OnActionExecuting");
-            _logger.LogInformation($"{context.HttpContext.Request.Body.}");
+            _logger.LogInformation($"{context.HttpContext.Request.Body}");
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
